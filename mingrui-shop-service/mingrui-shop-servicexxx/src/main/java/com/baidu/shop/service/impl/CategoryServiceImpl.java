@@ -62,7 +62,7 @@ public class CategoryServiceImpl extends BaseApiService implements CategoryServi
         Example example1 = new Example(CategoryBrandEntity.class);
         example1.createCriteria().andEqualTo("categoryId",id);
         List<CategoryBrandEntity> categoryBrandList = categoryBrandMapper.selectByExample(example1);
-        if(categoryBrandList.size() != 0) return this.setResultError("绑定了不能删除");
+        if(categoryBrandList.size() != 0) return this.setResultError("此数据绑定有品牌信息,不能被删除哟");
 
 
 
